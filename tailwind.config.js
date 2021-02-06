@@ -5,11 +5,12 @@ module.exports = {
     extend: {
       colors: {
         'wheat': '#E8C1A7',
-        'van-dyke-brown': '#613F29'
+        'van-dyke-brown': '#613F29',
+        'maximum-blue-green': '#02C1CB'
       },
       backgroundImage: theme => ({
         'hero-pattern': "url('/src/images/flower-fields.jpg')",
-        // 'footer-texture': "url('/img/footer-texture.png')",
+        'footer-logo': "url('/src/images/footerlogo.png')",
        })
     },
     height: {
