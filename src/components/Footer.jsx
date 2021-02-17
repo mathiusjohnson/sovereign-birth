@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../images/footerlogo.png";
+import logo from "../assets/images/footerlogo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faCircle } from '@fortawesome/free-regular-svg-icons'
 import { faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
   return (
-    <div className="footer border-t-2 border-wheat bg-maximum-blue-green py-6">
+    <div className="footer bg-maximum-blue-green py-6">
       <footer class="my-6 space-y-4 md:space-y-0 grid md:grid-cols-6 auto-rows-min ">
         <div className="flex flex-col justify-center items-center row-start-1 md:col-span-2">
           <div className="flex justify-center">

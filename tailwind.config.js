@@ -5,20 +5,30 @@ module.exports = {
     extend: {
       colors: {
         'wheat': '#E8C1A7',
-        'van-dyke-brown': '#613F29',
+        'van': '#09E3B1',
         'maximum-blue-green': '#02C1CB'
       },
       backgroundImage: theme => ({
-        'hero-pattern': "url('/src/images/flower-fields.jpg')",
-        'footer-logo': "url('/src/images/footerlogo.png')",
-       })
+        'hero-pattern': "url('/src/assets/images/flower-fields.jpg')",
+        'footer-logo': "url('/src/assets/images/footerlogo.png')",
+        'call-to-action': "url('/src/assets/images/DSC_6880.jpg')"
+       }),
+       fontFamily: {
+        'body': ['Montserrat', 'sans-serif']
+      },
     },
     height: {
-      'half-screen': '80vh'
+      'half-screen': '50vh'
     }
   },
   variants: {
-    extend: {},
+      display: ['responsive', 'group-hover', 'group-focus'],
+    extend: {
+      display: ['active', 'focus'],
+
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
