@@ -1,40 +1,42 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { loadState, saveState } from '../../helpers/localStorage';
 
-const NavigationLinks = () => {
+const NavigationLinks = ({ mode, transition, HOME, OTHERPAGES }) => {
+    const modeState = loadState();
+    const toHomeOrOther = (transitionTo) => {
+      console.log(transitionTo);
+      transition(transitionTo)
+      saveState(transitionTo)
+    }
+
+    console.log("mode in links: ", mode, modeState);
     return (
-        <div class="absolute z-10 hidden group-hover:inline-block">
-                
-        <div class=" pb-4 bg-transparent border-1 border-solid border-white text-white ml-2 text-center">
-          <div class="flex flex-col">
-            {/* NAVIGATION LINKS */}
-            <Link class="nav-link" to="/">
-              Home
-            </Link>
+           
+      <div className={`text-white z-20 text-2xl p-24 hidden lg:flex items-start justify-start`}>
+      <div className="flex flex-wrap space-x-4 ">
 
-            <Link class="nav-link" to="/about">
-              Meet Us
-            </Link>
+        {/* NAVIGATION LINKS */}
+        <Link onClick={() => toHomeOrOther("HOME")} className="nav-link" to="/">
+          Home
+        </Link>
 
-            <Link class="nav-link" to="/contact">
-              Services
-            </Link>
+        <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link" to="/contact">
+          Services
+        </Link>
 
-            <Link class="nav-link" to="/contact">
-              Resources
-            </Link>
+        <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link" to="/about">
+          About
+        </Link>
 
-            <Link class="nav-link" to="/contact">
-              Kind Words
-            </Link> 
 
-            <Link class="nav-link" to="/contact">
-              Contact
-            </Link>
+        <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link" to="/contact">
+          Contact
+        </Link>
 
-          </div>
-        </div>
+      </div>
     </div>
+
     );
 };
 

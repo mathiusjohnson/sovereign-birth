@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="">
       <Values />
-      <Banner />
+      {/* <Banner /> */}
       <CallToAction />
     </div>
   );

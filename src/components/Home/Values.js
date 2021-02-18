@@ -5,7 +5,7 @@ const Values = () => {
   return (
     <div className="grid md:grid-cols-2  my-24 items-center">
     <div className="w-5/6 mx-auto my-auto">
-      <img width="" src={birthBelly} alt="pregnant belly in light pink dress" />
+      <img className="rounded-xl shadow-xl" src={birthBelly} alt="pregnant belly in light pink dress" />
     </div>
     <div className="mx-4 mt-4 md:mt-0 space-y-2">
       <h3 className="text-lg font-semibold">On the value of doulas…</h3>

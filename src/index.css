@@ -7,7 +7,7 @@
 		left: 0;
 		bottom: 0;
 		right: 0;
-		height: 50%;
+		height: 90vh;
 		/* z-index: 2; */
 		background: rgba(0, 0, 0, .2);
 	}
@@ -22,12 +22,17 @@
 @tailwind utilities;
 
 @layer utilities {
-	.btn
-    {
-			@apply px-4 py-1 font-bold tracking-widest rounded-lg border-2 cursor-pointer text-center no-underline object-contain;
-    }
-	.btn-primary {
+	.btn {
+			@apply px-4 py-0.5 font-semibold tracking-widest rounded-lg border-2 cursor-pointer text-center no-underline object-contain;
+	}
+
+	.btn-primary,
+	.btn-primary:visited {
 		@apply bg-maximum-blue-green border-maximum-blue-green text-white;
+	}
+	.btn-primary:hover,
+	.btn-primary:visited:hover {
+		@apply bg-white border-maximum-blue-green text-maximum-blue-green;
 	}
 	.btn-secondary {
 		@apply border-wheat bg-white;

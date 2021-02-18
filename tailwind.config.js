@@ -9,17 +9,18 @@ module.exports = {
         'maximum-blue-green': '#02C1CB'
       },
       backgroundImage: theme => ({
-        'hero-pattern': "url('/src/assets/images/flower-fields.jpg')",
+        'hero-pattern': "url('/src/assets/images/DSC_6880.jpg')",
         'footer-logo': "url('/src/assets/images/footerlogo.png')",
         'call-to-action': "url('/src/assets/images/DSC_6880.jpg')"
        }),
        fontFamily: {
         'body': ['Montserrat', 'sans-serif']
       },
+      height: {
+        'half-screen': '90vh'
+      }
     },
-    height: {
-      'half-screen': '50vh'
-    }
+
   },
   variants: {
       display: ['responsive', 'group-hover', 'group-focus'],
