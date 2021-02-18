@@ -21,7 +21,7 @@ const NavigationLinks = ({ mode, transition, HOME, OTHERPAGES }) => {
           Home
         </Link>
 
-        <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link" to="/contact">
+        <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link" to="/services">
           Services
         </Link>
 
