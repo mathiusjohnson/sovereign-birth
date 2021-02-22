@@ -1,0 +1,79 @@
+{
+  "main": {
+    "social":[
+      {
+        "name":"google-plus",
+        "url":"mailto:info@sovereignbirth.com",
+        "className":"far fa-envelope"
+      },
+      {
+        "name":"phone",
+        "url":"tel:1-236-984-7894",
+        "className":"fa fa-phone"
+      }
+    ]
+  },
+  "services":[
+    {
+      "name":"Wild Pregnancy Mentoring",
+      "description":"I believe in your intuitive pregnancy & physiological home birth vision.  I offer to walk along side you in sisterhood as I offer guidance prenatally to help forge your sovereign path.",
+      "image": "https://img1.wsimg.com/isteam/ip/5bd676db-ceec-42c7-a705-f42d2c115bcc/DSC_0299-0001.jpg/:/cr=t:57.56%25,l:0%25,w:100%25,h:32.79%25/rs=w:388,h:194,cg:true"
+    },
+    {
+      "name":"Freebirth Support",
+      "description":"Do you need support in identifying your birth vision? Do you have questions about your options? Are you confused or uncertain about something your care provider has said?",
+      "image": "https://img1.wsimg.com/isteam/ip/5bd676db-ceec-42c7-a705-f42d2c115bcc/DSC_0299-0001.jpg/:/cr=t:57.56%25,l:0%25,w:100%25,h:32.79%25/rs=w:388,h:194,cg:true"
+    },
+    {
+      "name": "Homebirth Doula",
+      "description": "  I found mentorship among like minded women, I thought critically about my participation in the system, and how I could align in integrity as a birth keeper to support women in birthing in their power.",
+      "image": "/images/conscious.webp"
+    },
+    {
+      "name":"Conscious Postpartum Preparation",
+      "description": "How would it feel to journey through pregnancy in full connection with your self and the little soul you are nourishing within your womb?",
+      "image": "/images/conscious.webp"
+    },
+    {
+      "name":"Prenatal Yoga",
+      "description":"You have everything you need within you to birth in your power, surrounded in love, and in full connection with yourself and your baby.  Awaken the innate tools within you to support your sacred journey in full alignment with your vision for birth.",
+      "image": "/images/prenatalyoga.jpeg"
+    },
+    {
+      "name":"Prenatal Community Circle",
+      "description":"Mommas, your body knows how it wishes to give birth. Are you ready to hear the call? Join me in a self paced pre-recorded prenatal series to cultivate your sovereign birth journey! Connect to yourself, your baby, and your vison.",
+      "image": "/images/shopproducts.webp"
+    },
+    {
+      "name":"Shop Products",
+      "description":"Shop consciously crafted items that honor nature's intelligence made by a momma for mommas and their little ones. All ingredients are organic, handmade, and assembled in my home.",
+      "image": "/images/products.webp"
+    }
+  ],
+  "products": [
+    {
+      "title":"Freeflow Social Network",
+      "category":"React.js with Redux project using express.js backend (still in development)",
+      "image":"social.jpg",
+      "url":"https://freeflow-network.netlify.app/"
+    },
+    {
+      "title":"Interview Scheduler App",
+      "category":"React.js project using express.js backend, with useReducer hook and websocket",
+      "image":"scheduler.jpeg",
+      "url":"https://interview-scheduler-mj.netlify.app/"
+    },
+    {
+      "title":"Johnson Landscaping Website",
+      "category":"Previous profession's business website",
+      "image":"johnsonlandscaping.jpeg",
+      "url":"https://johnsonlandscaping.netlify.app/index.html"
+    },
+    {
+      "title":"Yogi Mathius Personal Blog",
+      "category":"Unfinished personal blog for yoga",
+      "image":"yogimathius.jpeg",
+      "url":"https://yogimathius.netlify.app/"
+    }
+  ]
+}

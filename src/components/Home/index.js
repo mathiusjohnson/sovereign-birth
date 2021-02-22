@@ -3,7 +3,8 @@ import CallToAction from "./CallToAction";
 import Values from "./Values";
 import LazyLoad from 'react-lazyload';
 
-function Home() {
+function Home(props) {
+  console.log("state in home: ", props);
   return (
     <div className="">
       <LazyLoad height={200}>
@@ -17,4 +18,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Home;  

@@ -5,32 +5,30 @@ import { loadState, saveState } from '../../helpers/localStorage';
 const NavigationLinks = ({ mode, transition, HOME, OTHERPAGES }) => {
     const modeState = loadState();
     const toHomeOrOther = (transitionTo) => {
-      console.log(transitionTo);
       transition(transitionTo)
       saveState(transitionTo)
     }
 
-    console.log("mode in links: ", mode, modeState);
     return (
            
       <div className={`text-white z-20 text-2xl p-24 hidden lg:flex items-start justify-start`}>
       <div className="flex flex-wrap space-x-4 ">
 
         {/* NAVIGATION LINKS */}
-        <Link onClick={() => toHomeOrOther("HOME")} className="nav-link" to="/">
+        <Link onClick={() => toHomeOrOther("HOME")} className="nav-link hover:opacity-70" to="/">
           Home
         </Link>
 
-        <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link" to="/services">
+        <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link hover:opacity-70" to="/services">
           Services
         </Link>
 
-        <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link" to="/about">
+        <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link hover:opacity-70" to="/about">
           About
         </Link>
 
 
-        <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link" to="/contact">
+        <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link hover:opacity-70" to="/contact">
           Contact
         </Link>
 

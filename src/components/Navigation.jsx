@@ -12,10 +12,7 @@ const OTHERPAGES = "OTHERPAGES";
 
 function Navigation(props) {
   const modeState = loadState();
-  console.log("mode state in nav: ", modeState);
   const { mode, transition } = useVisualMode(HOME);
-
-  console.log("mode in navigation: ", mode, modeState);
 
   const toOtherPAges = mode === OTHERPAGES || modeState === OTHERPAGES
   return (

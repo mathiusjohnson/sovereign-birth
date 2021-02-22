@@ -1,19 +1,28 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navigation, Footer, Home, About, Contact, Services } from "./components";
-// import Home from './components/Home'
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { Navigation, Footer } from "./components";
+import AppRoute from './components/AppRoute';
+import routes from './Config/routes.js';
+import useApplicationData from "./hooks/useApplicationData";
+
 function App() {
+  const { state } = useApplicationData();
+  // console.log(state);
   return (
     <div className="App font-body">
       <Router>
         <Navigation />
-        <Switch>
-          <Route path="/" exact component={() => <Home />} />
-          <Route path="/about" exact component={() => <About />} />
-          <Route path="/contact" exact component={() => <Contact />} />
-          <Route path="/services" exact component={() => <Services />} />
-
-        </Switch>
+          <Switch>
+            {routes.map((route) => (
+              <AppRoute
+                key={route.path}
+                path={route.path}
+                component={route.component}
+                isPrivate={route.isPrivate}
+                state={state}
+              />
+            ))}
+          </Switch>
         <Footer />
       </Router>
     </div>
