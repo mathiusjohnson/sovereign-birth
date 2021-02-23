@@ -1,9 +1,12 @@
-import { Home, Services, About, Contact } from '../components'
+import { Home, Services, About } from '../components'
+import ContactPage from '../pages/Contact'
+import HomePage from '../pages/Home'
+
 
 const routes = [
   {
-    path: '/Home',
-    component: Home,
+    path: '/home',
+    component: HomePage,
     isPrivate: false,
   },
   {
@@ -18,7 +21,7 @@ const routes = [
   },
   {
     path: '/contact',
-    component: Contact,
+    component: ContactPage,
     isPrivate: false,
   },
 ];

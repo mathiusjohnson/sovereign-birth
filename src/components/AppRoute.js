@@ -3,10 +3,10 @@ import { Redirect, Route } from 'react-router-dom';
 
 
 const AppRoutes = ({ component: Component, path, isPrivate, props, state, ...rest }) => {
-
+console.log();
 	return (
 		<Route
-			path={path}
+			exact path={path}
 			render={(props) =>
 				isPrivate === null ? (
 					<Redirect to={{ pathname: '/login' }} />

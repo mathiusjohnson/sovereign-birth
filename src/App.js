@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import { Navigation, Footer } from "./components";
 import AppRoute from './components/AppRoute';
 import routes from './Config/routes.js';
@@ -13,6 +13,12 @@ function App() {
       <Router>
         <Navigation />
           <Switch>
+            <Route exact path = '/'
+              render={() => {
+                return (
+                  <Redirect to ="/home"/>
+                )
+              }} />
             {routes.map((route) => (
               <AppRoute
                 key={route.path}
