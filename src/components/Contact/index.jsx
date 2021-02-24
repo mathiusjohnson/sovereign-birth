@@ -3,7 +3,7 @@ import EmailInput from './EmailInput';
 import MessageInput from './MessageInput';
 import NameInput from './NameInput';
 import SubjectInput from './SubjectInput';
-import axios from 'axios';
+// import axios from 'axios';
 import emailjs, { init } from 'emailjs-com';
 
 init("user_rivxf7OIBzCWd9dlHiDrz");
@@ -98,7 +98,7 @@ const Contact = () => {
         <MessageInput message={message} onMsgChange={onMsgChange} />
         <div className="md:flex md:items-center">
           <div className="md:w-1/3">
-            <button className="shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none  font-bold py-2 px-4 rounded" type="button" onClick={(e) => sendEmail(e)}>
+            <button className="btn btn-primary shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none  font-bold py-2 px-4 rounded" type="button" onClick={(e) => sendEmail(e)}>
               Send
             </button>
           </div>

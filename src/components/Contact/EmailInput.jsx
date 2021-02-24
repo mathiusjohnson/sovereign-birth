@@ -8,7 +8,6 @@ const EmailInput = ({ onEmailChange , email}) => {
           E-mail
         </label>
         <input value={email} onChange={(event) => onEmailChange(event)} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email"></input>
-        <p className="text-gray-600 text-xs italic">Some tips - as long as needed</p>
       </div>
     </div>
   );

@@ -1,24 +1,29 @@
 import React from 'react';
-import insertHere from '../../assets/images/Insert-Photo-Here.jpg';
+import { Link } from 'react-router-dom';
+import { saveState } from '../../helpers/localStorage'
 
 const ServiceListItem = ({service}) => {
+  console.log(service);
   return (
-    <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-      <article class="overflow-hidden rounded-lg shadow-lg">
+    <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+      <article className="overflow-hidden rounded-lg shadow hover:shadow-lg">
 
         <a href="/home">
-          <img class="block h-auto w-full max-h-44 object-cover"  src={service.image} alt="insert here text"></img>
+          <img className="block h-auto w-full max-h-44 object-cover"  src={service.image} alt="insert here text"></img>
         </a>
 
-        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-          <h1 class="text-lg">
-            <a class="no-underline hover:underline text-black" href="/home">
+        <header className="flex items-center justify-between leading-tight p-2 md:p-4">
+          <h1 className="text-lg">
+          <Link to={`/service/${service.id}`} onClick={() => saveState(service)}>
+
+            <p className="no-underline text-maximum-blue-green font-bold hover:opacity-70">
              {service.name}
-            </a>
+            </p>
+            </Link>
           </h1>
         </header>
 
-        <footer class="flex justify-between leading-5 p-2 md:p-4 h-40">
+        <footer className="flex justify-between leading-5 p-2 md:p-4 h-40">
           <p className="">{service.description}</p>
         </footer>
 

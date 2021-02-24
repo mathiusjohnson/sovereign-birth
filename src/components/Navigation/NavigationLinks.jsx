@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { loadState, saveState } from '../../helpers/localStorage';
+import { saveState } from '../../helpers/localStorage';
 
 const NavigationLinks = ({ mode, transition, HOME, OTHERPAGES }) => {
-    const modeState = loadState();
-    const toHomeOrOther = (transitionTo) => {
+
+  const toHomeOrOther = (transitionTo) => {
       transition(transitionTo)
       saveState(transitionTo)
     }

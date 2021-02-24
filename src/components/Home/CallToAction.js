@@ -6,20 +6,21 @@ const CallToAction = () => {
     <div className=" grid grid-cols-2">
      <div className="col-start-1 flex flex-col justify-evenly items-center text-2xl space-y-4">
        <ul className="flex flex-col space-y-2 text-center font-semibold">
-         <li className="hover:text-maximum-blue-green cursor-pointer">Wild Pregnancy Mentoring</li>
-         <li className="hover:text-maximum-blue-green cursor-pointer">Freebirth Support</li>
-         <li className="hover:text-maximum-blue-green cursor-pointer">Homebirth Doula</li>
-         <li className="hover:text-maximum-blue-green cursor-pointer">Conscious Postpartum Preparation</li>
-         <li className="hover:text-maximum-blue-green cursor-pointer">Prenatal Yoga</li>
-         <li className="hover:text-maximum-blue-green cursor-pointer">Prenatal Community Circle</li>
-         <li className="hover:text-maximum-blue-green cursor-pointer">Shop Products</li>
+         <li className="text-maximum-blue-green cursor-pointer hover:text-black">Wild Pregnancy Mentoring
+         </li>
+         <li className="text-maximum-blue-green cursor-pointer hover:text-black">Freebirth Support</li>
+         <li className="text-maximum-blue-green cursor-pointer hover:text-black">Homebirth Doula</li>
+         <li className="text-maximum-blue-green cursor-pointer hover:text-black">Conscious Postpartum Preparation</li>
+         <li className="text-maximum-blue-green cursor-pointer hover:text-black">Prenatal Yoga</li>
+         <li className="text-maximum-blue-green cursor-pointer hover:text-black">Prenatal Community Circle</li>
+         <li className="text-maximum-blue-green cursor-pointer hover:text-black">Shop Products</li>
        </ul>
        <div className="space-y-4 flex flex-col justify-center items-center">
-          <h2 className="text-maximum-blue-green font-semibold text-center w-5/6">Get my birth affirmation recording for free!</h2>
           <div className="space-x-4 flex justify-center">
             <input type="text" className="border-2 border-black rounded text-center " size="16" placeholder="Enter email.."></input>
             <button className="btn btn-primary text-base">Submit</button>
           </div>
+          <h2 className="text-maximum-blue-green font-semibold text-base text-center w-5/6">Sign up to get my birth affirmation recording for free!</h2>
        </div>
       </div> 
       <div className="flex justify-center">

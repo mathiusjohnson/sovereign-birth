@@ -1,7 +1,7 @@
-import { Home, Services, About } from '../components'
+import { Services, About } from '../components'
 import ContactPage from '../pages/Contact'
 import HomePage from '../pages/Home'
-
+import SingleServicePage from '../components/Services/SingleServicePage'
 
 const routes = [
   {
@@ -12,6 +12,11 @@ const routes = [
   {
     path: '/services',
     component: Services,
+    isPrivate: false,
+  },
+  {
+    path: '/service/:id',
+    component: SingleServicePage,
     isPrivate: false,
   },
   {

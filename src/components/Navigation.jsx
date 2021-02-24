@@ -14,7 +14,6 @@ function Navigation(props) {
   const modeState = loadState();
   const { mode, transition } = useVisualMode(HOME);
 
-  const toOtherPAges = mode === OTHERPAGES || modeState === OTHERPAGES
   return (
 
       <nav>
