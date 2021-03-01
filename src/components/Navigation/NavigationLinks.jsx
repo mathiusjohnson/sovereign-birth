@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { saveState } from '../../helpers/localStorage';
+import AuthNav from "../auth-nav";
+import LogoutButton from '../logout-button';
 
 const NavigationLinks = ({ mode, transition, HOME, OTHERPAGES }) => {
 
@@ -32,6 +34,8 @@ const NavigationLinks = ({ mode, transition, HOME, OTHERPAGES }) => {
           Contact
         </Link>
 
+        <AuthNav />
+        <LogoutButton />
       </div>
     </div>
 
