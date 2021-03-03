@@ -1,6 +1,6 @@
 import { Services, About } from '../components'
 import ContactPage from '../pages/Contact'
-import HomePage from '../pages/Home'
+import HomePage from '../components/Home/index.js'
 import SingleServicePage from '../components/Services/SingleServicePage'
 
 const routes = [

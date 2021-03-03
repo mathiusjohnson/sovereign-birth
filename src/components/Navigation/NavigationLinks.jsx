@@ -1,8 +1,12 @@
 import React from 'react';
+import { StyledFirebaseAuth } from 'react-firebaseui';
+import {uiConfig} from '../Firebase'
 import { Link } from "react-router-dom";
 import { saveState } from '../../helpers/localStorage';
 import AuthNav from "../auth-nav";
 import LogoutButton from '../logout-button';
+import Firebase from '../Firebase'
+// import firebase from 'firebase';
 
 const NavigationLinks = ({ mode, transition, HOME, OTHERPAGES }) => {
 
@@ -34,8 +38,8 @@ const NavigationLinks = ({ mode, transition, HOME, OTHERPAGES }) => {
           Contact
         </Link>
 
-        <AuthNav />
-        <LogoutButton />
+        <Firebase />
+
       </div>
     </div>
 
