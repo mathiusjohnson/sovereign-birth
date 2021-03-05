@@ -1,14 +1,20 @@
-import React from 'react';
-import { StyledFirebaseAuth } from 'react-firebaseui';
-import {uiConfig} from '../Firebase'
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { saveState } from '../../helpers/localStorage';
-import AuthNav from "../auth-nav";
-import LogoutButton from '../logout-button';
-import Firebase from '../Firebase'
-// import firebase from 'firebase';
+import fire from '../../fire.js';
 
-const NavigationLinks = ({ mode, transition, HOME, OTHERPAGES }) => {
+const NavigationLinks = ({ transition }) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  fire.auth().onAuthStateChanged((user) => {
+    return user ? setIsLoggedIn(true) : setIsLoggedIn(false);
+  });
+
+  const signOut = () => {
+    fire.auth().signOut()
+  };
+
+  console.log("logged in is: ", isLoggedIn);
 
   const toHomeOrOther = (transitionTo) => {
       transition(transitionTo)
@@ -38,7 +44,23 @@ const NavigationLinks = ({ mode, transition, HOME, OTHERPAGES }) => {
           Contact
         </Link>
 
-        <Firebase />
+        {!isLoggedIn
+          ? (
+            <Link to='/login'>
+              Admin
+            </Link>
+          ) 
+          : (
+            <>
+            <span onClick={signOut}>
+              <button href="#">Sign out</button>
+            </span>
+              <Link to='/AddNumber'>
+                Add Service
+              </Link>
+            </>
+          
+          )}
 
       </div>
     </div>

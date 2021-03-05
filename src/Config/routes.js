@@ -2,6 +2,9 @@ import { Services, About } from '../components'
 import ContactPage from '../pages/Contact'
 import HomePage from '../components/Home/index.js'
 import SingleServicePage from '../components/Services/SingleServicePage'
+import Login from '../components/session/Login';
+import AddNumber from '../components/phonebook/AddNumber'
+// import ListAllNumbers from '../components/phonebook/ListAllNumbers'
 
 const routes = [
   {
@@ -29,6 +32,21 @@ const routes = [
     component: ContactPage,
     isPrivate: false,
   },
+  {
+    path: '/login',
+    component: Login,
+    isPrivate: false,
+  },
+  {
+    path: '/AddNumber',
+    component: AddNumber,
+    isPrivate: false,
+  },
+  // {
+  //   path: '/ListAllNumbers',
+  //   component: ListAllNumbers,
+  //   isPrivate: false,
+  // }
 ];
 
 export default routes;
