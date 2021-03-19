@@ -6,7 +6,7 @@ import routes from './Config/routes.js';
 import useApplicationData from "./hooks/useApplicationData";
 
 function App() {
-  const { state } = useApplicationData();
+  const { state, createService, deleteService } = useApplicationData();
   // console.log(state);
   return (
     <div className="App font-body">
@@ -26,6 +26,8 @@ function App() {
                 component={route.component}
                 isPrivate={route.isPrivate}
                 state={state}
+                createService={createService}
+                deleteService={deleteService}
               />
             ))}
           </Switch>

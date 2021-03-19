@@ -4,7 +4,7 @@ import Values from "./Values";
 import LazyLoad from 'react-lazyload';
 
 function Home(props) {
-  console.log("state in home: ", props);
+  // console.log("state in home: ", props);
   return (
     <div className="">
       <LazyLoad height={200}>

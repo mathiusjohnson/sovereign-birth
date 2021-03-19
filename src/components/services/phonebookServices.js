@@ -24,7 +24,7 @@ export const addToPhonebook = async (name, number) => {
     number,
   }
   try {
-    console.log(payload);
+    // console.log(payload);
     const res = await axios.post(url, payload, header);
     return res.data;
 

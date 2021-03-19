@@ -2,9 +2,9 @@ import React from 'react';
 import { loadState } from '../../helpers/localStorage'
 
 const SingleServicePage = (props) => {
-  console.log("props location in single service: ", props.location);
+  // console.log("props location in single service: ", props.location);
   const service = loadState()
-  console.log("service in state: ", service);
+  // console.log("service in state: ", service);
   return (
     <div className="space-y-2 my-2">
       <div className="flex justify-center font-bold">

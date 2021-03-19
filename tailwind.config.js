@@ -26,8 +26,9 @@ module.exports = {
       display: ['responsive', 'group-hover', 'group-focus'],
     extend: {
       display: ['active', 'focus'],
-
     },
+    borderWidth: ['active', 'focus', 'hover', 'group-hover'],
+    borderColor: ['active'],
   },
   plugins: [
     require('@tailwindcss/typography'),
