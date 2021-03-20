@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import fire from '../../../fire.js';
+import React from 'react';
+// import fire from '../../../fire.js';
 import useVisualMode from '../../../hooks/useVisualMode'
 import EditService from './EditService.js';
 import ShowTextBody from './ShowTextBody.js';
@@ -21,12 +21,12 @@ const ERROR_SAVE = "ERROR_SAVE";
 
 export default function ServiceListItem({service, createService, deleteService, id}) {
   // console.log(service);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { mode, transition, back } = useVisualMode(SHOW);
 
-  fire.auth().onAuthStateChanged((user) => {
-    return user ? setIsLoggedIn(true) : setIsLoggedIn(false);
-  });
+  // fire.auth().onAuthStateChanged((user) => {
+  //   return user ? setIsLoggedIn(true) : setIsLoggedIn(false);
+  // });
 
   const onEditClicked = () => {
     transition(EDIT)
