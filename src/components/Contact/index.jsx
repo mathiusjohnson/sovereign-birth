@@ -90,7 +90,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="flex justify-center my-12">
+    <div className="flex justify-center my-12 mx-8 md-mx-0">
       <form className="w-full max-w-lg" onSubmit={(e) => sendEmail(e)}>  
         <NameInput firstName={firstName} lastName={lastName} onFirstNameChange={onFirstNameChange} onLastNameChange={onLastNameChange}/>
         <EmailInput email={email} onEmailChange={onEmailChange}/>

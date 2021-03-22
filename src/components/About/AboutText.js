@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutText = () => {
   return (
-    <div className="flex flex-col my-24 mr-32 space-y-8">
+    <div className="flex flex-col md:mr-32 space-y-4 md:space-y-8 px-4 md:px-0">
       <h3 className="text-4xl">I'm Clara Johnson..</h3>
       <p className="text-xl leading-8">Mother of 2 (soon to be 3), Radical Birth Keeper, Yoga Teacher, and Craniosacral Practitioner.  I work with empowered-knowledge seeking women who believe that birthing in sovereignty is their birthright.
 
