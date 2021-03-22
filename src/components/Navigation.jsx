@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import NavigationLinks from "./Navigation/NavigationLinks";
-import DropDownNavigationLinks from "./Navigation/DropDownNavigationLinks";
+import DropDown from "./Navigation/DropDown";
 import useVisualMode from '../hooks/useVisualMode'
 import NavigationBody from "./Navigation/NavigationBody";
 import NavigationLogo from "./Navigation/NavigationLogo";
@@ -21,14 +21,18 @@ function Navigation(props) {
   
         {mode === HOME || modeState === HOME ?
           <div id="overlay" className="bg-hero-pattern bg-cover h-half-screen overlay z-10 grid grid-cols-2 lg:grid-rows-2 lg:grid-cols-3 w-100 bg-top">
-            <DropDownNavigationLinks transition={transition} SHOW={HOME} OTHERPAGES={OTHERPAGES} mode={mode}  />
+            <div className="flex justify-center mt-12 md:hidden">
+              <DropDown transition={transition} SHOW={HOME} OTHERPAGES={OTHERPAGES} mode={mode}  />
+            </div>
             <NavigationLinks transition={transition} SHOW={HOME} OTHERPAGES={OTHERPAGES} />
             <NavigationBody />
             <NavigationLogo />
           </div> :
 
           <div className="bg-maximum-blue-green grid grid-cols-2 lg:grid-cols-3 w-100">
-            <DropDownNavigationLinks transition={transition} SHOW={HOME} OTHERPAGES={OTHERPAGES}  />
+            <div className="md:hidden">
+              <DropDown transition={transition} SHOW={HOME} OTHERPAGES={OTHERPAGES}  />
+            </div>
             <NavigationLinks transition={transition} SHOW={HOME} OTHERPAGES={OTHERPAGES} mode={mode}/>
             <NavigationLogo />
           </div>

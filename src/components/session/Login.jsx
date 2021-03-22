@@ -12,7 +12,7 @@ const Login = () => {
         });
     }
     return (
-        <div>
+        <div className="flex flex-col items-center justify-center">
         <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <input

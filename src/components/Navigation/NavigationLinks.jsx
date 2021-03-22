@@ -44,24 +44,6 @@ const NavigationLinks = ({ transition }) => {
           Contact
         </Link>
 
-        {!isLoggedIn
-          ? (
-            <Link to='/login'>
-              Admin
-            </Link>
-          ) 
-          : (
-            <>
-            <span onClick={signOut}>
-              <button href="#">Sign out</button>
-            </span>
-              <Link to='/AddNumber'>
-                Add Service
-              </Link>
-            </>
-          
-          )}
-
       </div>
     </div>
 
