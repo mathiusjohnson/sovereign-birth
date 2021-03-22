@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
@@ -12,7 +12,6 @@ import PostAddIcon from '@material-ui/icons/PostAdd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import fire from '../../fire.js';
 import { saveState } from '../../helpers/localStorage';
 
 
@@ -58,15 +57,6 @@ export default function DropDown({ transition }) {
     setAnchorEl(null);
   };
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  fire.auth().onAuthStateChanged((user) => {
-    return user ? setIsLoggedIn(true) : setIsLoggedIn(false);
-  });
-
-  const signOut = () => {
-    fire.auth().signOut()
-  };
 
 
   const toHomeOrOther = (transitionTo) => {
