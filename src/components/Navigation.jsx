@@ -21,7 +21,7 @@ function Navigation(props) {
   
         {mode === HOME || modeState === HOME ?
           <div id="overlay" className="bg-hero-pattern bg-cover h-half-screen overlay z-10 grid grid-cols-2 lg:grid-rows-2 lg:grid-cols-3 w-100 bg-top">
-            <div className="flex justify-center mt-12 md:hidden">
+            <div className="flex justify-center mt-12 lg:hidden">
               <DropDown transition={transition} SHOW={HOME} OTHERPAGES={OTHERPAGES} mode={mode}  />
             </div>
             <NavigationLinks transition={transition} SHOW={HOME} OTHERPAGES={OTHERPAGES} />
@@ -30,8 +30,8 @@ function Navigation(props) {
           </div> :
 
           <div className="bg-maximum-blue-green grid grid-cols-2 lg:grid-cols-3 w-100">
-            <div className="md:hidden">
-              <DropDown transition={transition} SHOW={HOME} OTHERPAGES={OTHERPAGES}  />
+            <div className="flex justify-center mt-12 lg:hidden">
+              <DropDown transition={transition} SHOW={HOME} OTHERPAGES={OTHERPAGES} mode={mode}  />
             </div>
             <NavigationLinks transition={transition} SHOW={HOME} OTHERPAGES={OTHERPAGES} mode={mode}/>
             <NavigationLogo />

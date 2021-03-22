@@ -12,9 +12,8 @@ const Login = () => {
         });
     }
     return (
-        <div className="flex flex-col items-center justify-center">
-        <h2>Login</h2>
-            <form onSubmit={handleSubmit}>
+        <div className="flex flex-col items-center justify-center space-y-4 mt-4">
+            <form className="flex flex-col justify-center" onSubmit={handleSubmit}>
                 <input
                     type="text"
                     onChange={({ target }) => setEmail(target.value)}
@@ -27,7 +26,7 @@ const Login = () => {
                     placeholder="Password"
                 />
                 <br />
-                <button type="submit">
+                <button className="btn btn-primary" type="submit">
                     Sign in
                 </button>
             </form>

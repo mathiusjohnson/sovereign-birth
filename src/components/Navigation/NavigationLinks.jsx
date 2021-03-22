@@ -1,20 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 import { saveState } from '../../helpers/localStorage';
-import fire from '../../fire.js';
 
 const NavigationLinks = ({ transition }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  fire.auth().onAuthStateChanged((user) => {
-    return user ? setIsLoggedIn(true) : setIsLoggedIn(false);
-  });
-
-  const signOut = () => {
-    fire.auth().signOut()
-  };
-
-  console.log("logged in is: ", isLoggedIn);
 
   const toHomeOrOther = (transitionTo) => {
       transition(transitionTo)

@@ -5,7 +5,6 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import PersonIcon from '@material-ui/icons/Person';
 import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
@@ -15,6 +14,7 @@ import { Link } from 'react-router-dom'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import fire from '../../fire.js';
 import { saveState } from '../../helpers/localStorage';
+
 
 const StyledMenu = withStyles({
   paper: {
