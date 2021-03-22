@@ -1,5 +1,5 @@
-import React from 'react';
-// import fire from '../../../fire.js';
+import React, { useState } from 'react';
+import fire from '../../../fire.js';
 import useVisualMode from '../../../hooks/useVisualMode'
 import EditService from './EditService.js';
 import ShowTextBody from './ShowTextBody.js';
@@ -21,12 +21,12 @@ const ERROR_SAVE = "ERROR_SAVE";
 
 export default function ServiceListItem({service, createService, deleteService, id}) {
   // console.log(service);
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { mode, transition, back } = useVisualMode(SHOW);
 
-  // fire.auth().onAuthStateChanged((user) => {
-  //   return user ? setIsLoggedIn(true) : setIsLoggedIn(false);
-  // });
+  fire.auth().onAuthStateChanged((user) => {
+    return user ? setIsLoggedIn(true) : setIsLoggedIn(false);
+  });
 
   const onEditClicked = () => {
     transition(EDIT)
@@ -51,12 +51,12 @@ export default function ServiceListItem({service, createService, deleteService, 
       }) 
   }
 
-  // // FOR THE CANCEL INTERVIEW BUTTON IN THE SHOW COMPONENT
+  // // FOR THE DELETE SERVICE BUTTON IN THE SHOW COMPONENT
   // function cancel(id) {
   //   transition(CONFIRM);
   // }
 
-  // // DELETES AN APPOINTMENT
+  // // DELETES A SERVICE
   // function deleteService(id) {
   //   transition(DELETING, true);
   //     deleteService(id)
@@ -102,7 +102,7 @@ export default function ServiceListItem({service, createService, deleteService, 
         )}
 
         <footer className="">
-          { mode === 'SHOW' ? 
+          { isLoggedIn && mode === 'SHOW' ? 
             <div onClick={() => onEditClicked()} className="btn btn-primary m-2">Edit</div>
             :
             ""
