@@ -12,7 +12,7 @@ const ServiceList = ({titles}) => {
     )
     });
   return (
-    <ul className="flex flex-col space-y-1 md:space-y-2 text-center font-semibold">
+    <ul className="flex flex-col space-y-1 md:space-y-2 text-center text-lg md:text-3xl font-semibold">
     {renderedTitles}
   </ul>
   );

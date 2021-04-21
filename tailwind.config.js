@@ -6,7 +6,8 @@ module.exports = {
       colors: {
         'wheat': '#E8C1A7',
         'van': '#09E3B1',
-        'maximum-blue-green': '#02C1CB'
+        'maximum-blue-green': '#02C1CB',
+        'whitesmoke': '#f6f6f6'
       },
       backgroundImage: theme => ({
         'hero-pattern': "url('/src/assets/images/DSC_6880.jpg')",
@@ -14,7 +15,8 @@ module.exports = {
         'call-to-action': "url('/src/assets/images/DSC_6880.jpg')"
        }),
        fontFamily: {
-        'body': ['Montserrat', 'sans-serif']
+        'body': ['Poppins', 'sans-serif'],
+        'header': ['Adamina', 'serif']
       },
       height: {
         'half-screen': '90vh'

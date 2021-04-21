@@ -46,7 +46,7 @@ const StyledMenuItem = withStyles((theme) => ({
   },
 }))(MenuItem);
 
-export default function DropDown({ transition }) {
+export default function DropDown() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -57,15 +57,10 @@ export default function DropDown({ transition }) {
     setAnchorEl(null);
   };
 
-
-
-  const toHomeOrOther = (transitionTo) => {
-    transition(transitionTo)
-    saveState(transitionTo)
-  }
-
   return (
-    <div>
+    <div className="flex justify-center ml-4 md:mt-12 lg:hidden">
+      <div>
+
       <Button
         aria-controls="customized-menu"
         aria-haspopup="true"
@@ -73,48 +68,38 @@ export default function DropDown({ transition }) {
         color="primary"
         onClick={handleClick}
       >
-        <FontAwesomeIcon className="text-white fa-2x" icon={faBars} /> 
+      <FontAwesomeIcon className="text-white fa-2x" icon={faBars} /> 
       </Button>
       <StyledMenu
+      className="ml-4 mt-2"
         id="customized-menu"
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <Link onClick={() => toHomeOrOther("HOME")} to="/">
+        <Link to="/">
           <StyledMenuItem onClick={handleClose}>
-            <ListItemIcon>
-              <PostAddIcon fontSize="small" />
-            </ListItemIcon>
             <ListItemText primary="Home" />
           </StyledMenuItem>
         </Link>
-        <Link onClick={() => toHomeOrOther("OTHERPAGES")} to="/services">
+        <Link to="/offerings">
           <StyledMenuItem onClick={handleClose}>
-            <ListItemIcon>
-              <PeopleIcon fontSize="small" />
-            </ListItemIcon>
-            <ListItemText primary="Services" />
+            <ListItemText primary="Offerings" />
           </StyledMenuItem>
         </Link>
-        <Link onClick={() => toHomeOrOther("OTHERPAGES")} to='/about'>
+        <Link to='/about'>
           <StyledMenuItem onClick={handleClose}>
-            <ListItemIcon>
-              <PersonIcon fontSize="small" />
-            </ListItemIcon>
             <ListItemText primary="About" />
           </StyledMenuItem>
         </Link>
-        <Link onClick={() => toHomeOrOther("OTHERPAGES")} to='/contact'>
+        <Link to='/contact'>
           <StyledMenuItem onClick={handleClose}>
-            <ListItemIcon>
-              <BarChartIcon fontSize="small" />
-            </ListItemIcon>
             <ListItemText primary="Contact" />
           </StyledMenuItem>
         </Link>
       </StyledMenu>
+      </div>
     </div>
   );
 }

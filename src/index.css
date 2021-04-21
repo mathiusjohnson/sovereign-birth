@@ -17,13 +17,17 @@
 	#pngColorFilter {
 		/* filter: brightness(0) invert(1); */
 	}
+
+	.MuiPaper-root {
+		@apply bg-maximum-blue-green text-white !important;
+	}
 }
 @tailwind components;
 @tailwind utilities;
 
 @layer utilities {
 	.btn {
-			@apply px-4 py-0.5 font-semibold tracking-widest rounded-lg border-2 cursor-pointer text-center no-underline object-contain;
+			@apply px-4 py-2 text-2xl font-semibold tracking-widest rounded-lg border-2 cursor-pointer text-center no-underline object-contain;
 	}
 
 	.btn-primary,

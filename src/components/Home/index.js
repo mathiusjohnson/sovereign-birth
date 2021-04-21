@@ -1,6 +1,7 @@
 import React from "react";
 import CallToAction from "./CallToAction";
 import Values from "./Values";
+import Banner from "./Banner";
 import LazyLoad from 'react-lazyload';
 
 function Home(businessData) {
@@ -8,7 +9,8 @@ function Home(businessData) {
   let titles = businessData.props.map(service => service.title);
   return (
     <div>
-      <div className="container mx-auto">
+      <div className="">
+        <Banner />
         <LazyLoad height={200}>
           <Values />
         </LazyLoad>
