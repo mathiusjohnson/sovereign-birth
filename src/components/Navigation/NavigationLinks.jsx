@@ -1,13 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { saveState } from '../../helpers/localStorage';
 
-const NavigationLinks = ({ transition }) => {
+const NavigationLinks = () => {
 
-  const toHomeOrOther = (transitionTo) => {
-      transition(transitionTo)
-      saveState(transitionTo)
-    }
 
     return (
            
@@ -15,20 +10,20 @@ const NavigationLinks = ({ transition }) => {
         <div className="flex flex-wrap space-x-4 z-50">
 
           {/* NAVIGATION LINKS */}
-          <Link onClick={() => toHomeOrOther("HOME")} className="nav-link hover:opacity-70" to="/">
+          <Link className="nav-link hover:opacity-70" to="/">
             Home
           </Link>
 
-          <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link hover:opacity-70" to="/offerings">
+          <Link className="nav-link hover:opacity-70" to="/offerings">
             Offerings
           </Link>
 
-          <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link hover:opacity-70" to="/about">
+          <Link className="nav-link hover:opacity-70" to="/about">
             About
           </Link>
 
 
-          <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link hover:opacity-70" to="/contact">
+          <Link className="nav-link hover:opacity-70" to="/contact">
             Contact
           </Link>
 

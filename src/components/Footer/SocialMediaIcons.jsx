@@ -2,7 +2,6 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faCircle } from '@fortawesome/free-regular-svg-icons'
 import { faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
-import { Link } from "react-router-dom";
 
 const SocialMediaIcons = () => {
   return (

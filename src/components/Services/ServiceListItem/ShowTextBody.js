@@ -4,7 +4,9 @@ import TextBodySegment from './TextBodySegment';
 const ShowTextBody = ({text_body}) => {
 
   let textArr = text_body.split('\n');
+  // eslint-disable-next-line array-callback-return
   const fullTextBody = textArr.map((element, index) => {
+    // console.log(element);
     if (element !== "") {
      return <TextBodySegment key={index} segment={element} />
     }

@@ -1,8 +1,8 @@
 import React from "react";
-import AdminLogin from "./Footer/AdminLogin";
-import FooterDetails from "./Footer/FooterDetails";
-import FooterLogo from "./Footer/FooterLogo";
-import SocialMediaIcons from "./Footer/SocialMediaIcons";
+import AdminLogin from "./AdminLogin";
+import FooterDetails from "./FooterDetails";
+import FooterLogo from "./FooterLogo";
+import SocialMediaIcons from "./SocialMediaIcons";
 
 function Footer() {
   return (
