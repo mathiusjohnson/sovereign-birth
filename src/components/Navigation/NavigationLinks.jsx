@@ -11,29 +11,29 @@ const NavigationLinks = ({ transition }) => {
 
     return (
            
-      <div className={`text-white z-20 text-2xl p-24 hidden lg:flex items-start justify-start`}>
-      <div className="flex flex-wrap space-x-4 ">
+      <div className={`text-white text-2xl p-24 hidden lg:flex items-start justify-start z-50`}>
+        <div className="flex flex-wrap space-x-4 z-50">
 
-        {/* NAVIGATION LINKS */}
-        <Link onClick={() => toHomeOrOther("HOME")} className="nav-link hover:opacity-70" to="/">
-          Home
-        </Link>
+          {/* NAVIGATION LINKS */}
+          <Link onClick={() => toHomeOrOther("HOME")} className="nav-link hover:opacity-70" to="/">
+            Home
+          </Link>
 
-        <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link hover:opacity-70" to="/services">
-          Services
-        </Link>
+          <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link hover:opacity-70" to="/offerings">
+            Offerings
+          </Link>
 
-        <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link hover:opacity-70" to="/about">
-          About
-        </Link>
+          <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link hover:opacity-70" to="/about">
+            About
+          </Link>
 
 
-        <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link hover:opacity-70" to="/contact">
-          Contact
-        </Link>
+          <Link  onClick={() => toHomeOrOther("OTHERPAGES")} className="nav-link hover:opacity-70" to="/contact">
+            Contact
+          </Link>
 
+        </div>
       </div>
-    </div>
 
     );
 };

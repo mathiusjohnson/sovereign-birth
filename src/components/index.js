@@ -1,4 +1,4 @@
-export { default as Navigation } from "./Navigation";
+export { default as Navigation } from "./Navigation/index.js";
 export { default as Footer } from "./Footer";
 export { default as Home } from "./Home/index.js";
 export { default as About } from "./About/index.js";

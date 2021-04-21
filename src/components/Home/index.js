@@ -4,16 +4,17 @@ import Values from "./Values";
 import LazyLoad from 'react-lazyload';
 
 function Home(props) {
-  // console.log("state in home: ", props);
   return (
-    <div className="">
-      <LazyLoad height={200}>
-        <Values />
-      </LazyLoad>
+    <div>
+      <div className="container mx-auto">
+        <LazyLoad height={200}>
+          <Values />
+        </LazyLoad>
 
-      <LazyLoad height={200}>
-        <CallToAction />
-      </LazyLoad>
+        <LazyLoad height={200}>
+          <CallToAction />
+        </LazyLoad>
+      </div>
     </div>
   );
 }

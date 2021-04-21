@@ -7,13 +7,13 @@ export default function Confirm (props) {
 			<section className="appointment__actions">
 				<div 
 					onClick={props.onCancel}
-					danger
+					danger="true"
 				>
 				Cancel
 				</div>
 				<div 
 					onClick={props.onConfirm}	
-					danger
+					danger="true"
 				>
 				Confirm
 				</div>

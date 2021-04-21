@@ -28,7 +28,6 @@ export default function Form ({
     }
     if (title !== "" && textBody !== null){
       setError("");
-      // console.log('id in on save edit service.js: ', id);
       onSave(title, textBody)
     } 
   }
@@ -55,7 +54,7 @@ export default function Form ({
             name="name"
             type="text"
             placeholder="Enter Service Text"
-            value={serviceText_body || "" }
+            value={textBody || "" }
             onChange={(event) => {
               setTextBody(event.target.value) 
               setError("")
@@ -68,14 +67,14 @@ export default function Form ({
       </section>
       <section className="">
         <section className="">
-          <div className="btn btn-secondary m-2" onClick={cancel} danger>
+          <div className="btn btn-secondary m-2" onClick={cancel} danger="true">
             Cancel
           </div>
           <div className="btn btn-primary m-2"
             onClick={() => {
               validate();
             }}
-            confirm
+            confirm="true"
           >
             Save
           </div>

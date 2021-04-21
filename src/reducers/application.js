@@ -18,9 +18,7 @@ export default function reducer(state, action) {
         const { updatedService } = action;
 
 
-        console.log("from reducer edit post");
         // const { text, post_id } = action;
-        //console.log("WTF?");
         const removedState = state.businessData.map((service) => {
           if (service.id === updatedService.serviceId) {
             service.text_body = updatedService.text_body;
@@ -28,10 +26,8 @@ export default function reducer(state, action) {
           }
           return service;
         });
-        console.log("from reducer", removedState);
         state = { ...state, businessData: removedState };
 
-        console.log('state:', state.businessData);
 
         return state;
       }

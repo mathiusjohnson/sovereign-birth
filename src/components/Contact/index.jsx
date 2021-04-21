@@ -18,30 +18,22 @@ const Contact = () => {
 
   const onFirstNameChange = (event) => {
     setFirstName(event.target.value)
-    console.log("name changed to: ", firstName);
   }
 
   const onLastNameChange = (event) => {
     setLastName(event.target.value)
-    console.log("name changed to: ", lastName);
   }
 
   const onEmailChange = (event) => {
     setEmail(event.target.value)
-    console.log("email: ", email,);
-
   }
 
   const onSubjectChange = (event) => {
       setSubject(event.target.value)
-      console.log("subject: ", subject );
-
   }
 
   const onMsgChange = (event) => {
     setMessage(event.target.value)
-    console.log("message: ", message );
-
   }
 
   function sendEmail(e) {
@@ -56,11 +48,10 @@ const Contact = () => {
 
     emailjs.send('service_xcnmobs', 'template_p1nhl97', messageDetails)
       .then((result) => {
-          console.log(result);
           alert("Message Sent."); 
           resetForm()
       }, (error) => {
-          console.log(error.text);
+          console.error(error.text);
       });
   }
 

@@ -8,6 +8,7 @@ import Status from "./Status";
 // import Confirm from "./Confirm";
 // import Error from "./Error";
 import Empty from "./Empty";
+import ShowButton from './ShowButton.js';
 
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
@@ -20,7 +21,6 @@ const ERROR_SAVE = "ERROR_SAVE";
 // const ERROR_DELETE = "ERROR_DELETE";
 
 export default function ServiceListItem({service, createService, deleteService, id}) {
-  // console.log(service);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { mode, transition, back } = useVisualMode(SHOW);
 
@@ -66,12 +66,7 @@ export default function ServiceListItem({service, createService, deleteService, 
 
 
   return (
-    <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-      <article className="overflow-hidden rounded-lg shadow hover:shadow-lg">
-
-        <a href="/home">
-          <img className="block h-auto w-full max-h-44 object-cover"  src={service.image_url} alt="insert here text"></img>
-        </a>
+      <article className="flex flex-col justify-between my-1 px-1 lg:my-4 lg:px-4 lg:mx-3 overflow-hidden rounded-lg shadow hover:shadow-lg">
 
         {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
 
@@ -86,11 +81,16 @@ export default function ServiceListItem({service, createService, deleteService, 
         )}
         
         {mode === 'SHOW' && (
-          <ShowTextBody 
-            text_body={service.text_body} 
-          />
+          <div className="flex">
+            <ShowTextBody text_body={service.text_body} />
+          </div>
         )}
 
+        {mode === 'SHOW' && (
+          <div className="flex">
+            <ShowButton call_to_action={service.call_to_action} />
+          </div>
+        )}
         {mode === 'EDIT' && (
           <EditService 
             id={service.id}
@@ -103,12 +103,13 @@ export default function ServiceListItem({service, createService, deleteService, 
 
         <footer className="">
           { isLoggedIn && mode === 'SHOW' ? 
-            <div onClick={() => onEditClicked()} className="btn btn-primary m-2">Edit</div>
+          <div className="flex">
+            <div onClick={() => onEditClicked()} className="btn btn-primary m-4">Edit</div>
+          </div>
             :
             ""
           }
         </footer>
       </article>
-    </div>
   );
 };

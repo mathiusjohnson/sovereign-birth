@@ -25,11 +25,10 @@ const theme = createMuiTheme({
 
 function App() {
   const { state, createService, deleteService } = useApplicationData();
-  // console.log(state);
   return (
     <MuiThemeProvider theme={theme}>
 
-      <div className="App font-body">
+      <div className="App font-body relative">
         <Router>
           <Navigation />
             <Switch>

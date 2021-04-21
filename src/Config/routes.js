@@ -13,7 +13,7 @@ const routes = [
     isPrivate: false,
   },
   {
-    path: '/services',
+    path: '/offerings',
     component: Services,
     isPrivate: false,
   },

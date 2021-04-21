@@ -15,8 +15,8 @@ const DropDownNavigationLinks = () => {
               Home
             </Link>
 
-            <Link className="nav-link" to="/contact">
-              Services
+            <Link className="nav-link" to="/offerings">
+              Offerings
             </Link>
 
             <Link className="nav-link" to="/about">
