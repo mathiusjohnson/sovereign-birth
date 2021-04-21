@@ -11,7 +11,7 @@ const ShowService = ({service}) => {
         <ShowTextBody text_body={service.text_body} />
       </div>
       <div className="flex justify-center">
-        <ShowButton call_to_action={service.call_to_action} />
+        <ShowButton call_to_action={service.call_to_action} call_to_action_link={service.call_to_action_link} call_to_action_target={service.call_to_action_target} />
       </div>
     </div>
   );
