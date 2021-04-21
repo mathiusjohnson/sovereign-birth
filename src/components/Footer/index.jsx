@@ -6,8 +6,8 @@ import SocialMediaIcons from "./SocialMediaIcons";
 
 function Footer() {
   return (
-    <div className="footer py-10">
-      <footer className="my-6 space-y-4 md:space-y-0 grid md:grid-cols-6 auto-rows-min text-maximum-blue-green ">
+    <div className="footer">
+      <footer className="my-2 space-y-4 md:space-y-0 grid md:grid-cols-6 auto-rows-min text-maximum-blue-green ">
         <FooterLogo />
         <FooterDetails />
         <SocialMediaIcons />

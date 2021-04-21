@@ -15,7 +15,6 @@ const Contact = () => {
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
 
-
   const onFirstNameChange = (event) => {
     setFirstName(event.target.value)
   }
@@ -55,23 +54,6 @@ const Contact = () => {
       });
   }
 
-  // const submitEmail = (e) => {
-  //   const state = { firstName, lastName, email, subject, message }
-  //   e.preventDefault();
-  //   axios({
-  //     method: "POST", 
-  //     url:"/send", 
-  //     data:  state
-  //   }).then((response)=>{
-  //     if (response.data.status === 'success'){
-  //         alert("Message Sent."); 
-  //         resetForm()
-  //     }else if(response.data.status === 'fail'){
-  //         alert("Message failed to send.")
-  //     }
-  //   })
-  // }
-
   const resetForm = () =>{
       setSubject('')
       setEmail('')
@@ -82,7 +64,7 @@ const Contact = () => {
 
   return (
     <div className="flex justify-center my-12 mx-8 md-mx-0">
-      <form className="w-full max-w-lg" onSubmit={(e) => sendEmail(e)}>  
+      <form className="w-full max-w-5xl" onSubmit={(e) => sendEmail(e)}>  
         <NameInput firstName={firstName} lastName={lastName} onFirstNameChange={onFirstNameChange} onLastNameChange={onLastNameChange}/>
         <EmailInput email={email} onEmailChange={onEmailChange}/>
         <SubjectInput subject={subject} onSubjectChange={onSubjectChange} />

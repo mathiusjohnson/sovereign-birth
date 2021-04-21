@@ -1,19 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import callToActionImage from '../../assets/images/DSC_6958.jpg'
 
-const CallToAction = () => {
+const CallToAction = ({titles}) => {
+
+  // console.log('props in cta: ', props.titles);
+  console.log(titles);
+  const renderedTitles = titles.map((title, index) => {
+    return (
+      <Link to="/offerings">
+        <li key={index} className="text-maximum-blue-green cursor-pointer hover:text-black">{title}
+        </li>  
+      </Link>
+    )
+    });
   return (
     <div className=" grid md:grid-cols-2">
      <div className="col-start-1 flex flex-col justify-evenly items-center text-2xl space-y-2 md:space-y-4">
        <ul className="flex flex-col space-y-1 md:space-y-2 text-center font-semibold">
-         <li className="text-maximum-blue-green cursor-pointer hover:text-black">Wild Pregnancy Mentoring
-         </li>
-         <li className="text-maximum-blue-green cursor-pointer hover:text-black">Freebirth Support</li>
-         <li className="text-maximum-blue-green cursor-pointer hover:text-black">Homebirth Doula</li>
-         <li className="text-maximum-blue-green cursor-pointer hover:text-black">Conscious Postpartum Preparation</li>
-         <li className="text-maximum-blue-green cursor-pointer hover:text-black">Prenatal Yoga</li>
-         <li className="text-maximum-blue-green cursor-pointer hover:text-black">Prenatal Community Circle</li>
-         <li className="text-maximum-blue-green cursor-pointer hover:text-black">Shop Products</li>
+         {renderedTitles}
        </ul>
        <div className="space-y-2 md:space-y-4 flex flex-col justify-center items-center">
           <div className="space-x-4 flex justify-center">

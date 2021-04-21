@@ -1,10 +1,10 @@
 import React from 'react';
 import Contact from '../components/Contact/index.jsx'
 
-const ContactPage = () => {
+const ContactPage = ({state}) => {
   return (
     <div>
-      <Contact />
+      <Contact state={state} />
     </div>
   );
 };

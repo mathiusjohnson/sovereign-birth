@@ -13,7 +13,7 @@ const ShowTextBody = ({text_body}) => {
   });
 
   return (
-    <div className="leading-5 p-2  md:p-4 space-y-3">{fullTextBody}</div>
+    <div className="text-xl leading-5 p-2 md:p-4 space-y-3">{fullTextBody}</div>
   );
 };
 

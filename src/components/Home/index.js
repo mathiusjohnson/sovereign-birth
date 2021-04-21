@@ -3,7 +3,9 @@ import CallToAction from "./CallToAction";
 import Values from "./Values";
 import LazyLoad from 'react-lazyload';
 
-function Home(props) {
+function Home(businessData) {
+  console.log('businessData in home: ', businessData.props);
+  let titles = businessData.props.map(service => service.title);
   return (
     <div>
       <div className="container mx-auto">
@@ -12,7 +14,7 @@ function Home(props) {
         </LazyLoad>
 
         <LazyLoad height={200}>
-          <CallToAction />
+          <CallToAction titles={titles} />
         </LazyLoad>
       </div>
     </div>

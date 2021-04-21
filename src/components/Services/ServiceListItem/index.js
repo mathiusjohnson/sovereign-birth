@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import fire from '../../../fire.js';
 import useVisualMode from '../../../hooks/useVisualMode'
 import EditService from './EditService.js';
-import ShowTextBody from './ShowTextBody.js';
-import ShowTitle from './ShowTitle'
 import Status from "./Status";
 // import Confirm from "./Confirm";
 // import Error from "./Error";
 import Empty from "./Empty";
-import ShowButton from './ShowButton.js';
+import ShowService from './ShowService.js';
 
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
@@ -66,7 +64,7 @@ export default function ServiceListItem({service, createService, deleteService, 
 
 
   return (
-      <article className="flex flex-col justify-between my-1 px-1 lg:my-4 lg:px-4 lg:mx-3 overflow-hidden rounded-lg shadow hover:shadow-lg">
+      <article className="text-center my-1 px-1 lg:my-4 lg:px-4 lg:mx-3 overflow-hidden rounded-lg shadow hover:shadow-lg">
 
         {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
 
@@ -75,22 +73,11 @@ export default function ServiceListItem({service, createService, deleteService, 
         {mode === DELETING && <Status message="Deleting..." />}
 
         {mode === 'SHOW' && (
-          <ShowTitle 
+          <ShowService className="" 
             id={service.id} 
-            title={service.title}/>
-        )}
-        
-        {mode === 'SHOW' && (
-          <div className="flex">
-            <ShowTextBody text_body={service.text_body} />
-          </div>
+            service={service}/>
         )}
 
-        {mode === 'SHOW' && (
-          <div className="flex">
-            <ShowButton call_to_action={service.call_to_action} />
-          </div>
-        )}
         {mode === 'EDIT' && (
           <EditService 
             id={service.id}

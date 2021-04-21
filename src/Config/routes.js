@@ -1,6 +1,7 @@
-import { Services, About } from '../components'
+import ServicesPage from '../pages/Services'
+import AboutPage from '../pages/About'
 import ContactPage from '../pages/Contact'
-import HomePage from '../components/Home/index.js'
+import HomePage from '../pages/Home.js'
 import SingleServicePage from '../components/Services/SingleServicePage'
 import Login from '../components/session/Login';
 
@@ -12,7 +13,7 @@ const routes = [
   },
   {
     path: '/offerings',
-    component: Services,
+    component: ServicesPage,
     isPrivate: false,
   },
   {
@@ -22,7 +23,7 @@ const routes = [
   },
   {
     path: '/about/',
-    component: About,
+    component: AboutPage,
     isPrivate: false,
   },
   {

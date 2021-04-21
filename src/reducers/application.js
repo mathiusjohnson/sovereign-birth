@@ -14,18 +14,16 @@ export default function reducer(state, action) {
         businessData
       };
 
-      case SET_SERVICE: {
-        const { updatedService } = action;
+    case SET_SERVICE: {
+      const { updatedService } = action;
 
-
-        // const { text, post_id } = action;
-        const removedState = state.businessData.map((service) => {
-          if (service.id === updatedService.serviceId) {
-            service.text_body = updatedService.text_body;
-            service.title = updatedService.title;
-          }
-          return service;
-        });
+      const removedState = state.businessData.map((service) => {
+        if (service.id === updatedService.serviceId) {
+          service.text_body = updatedService.text_body;
+          service.title = updatedService.title;
+        }
+        return service;
+      });
         state = { ...state, businessData: removedState };
 
 
