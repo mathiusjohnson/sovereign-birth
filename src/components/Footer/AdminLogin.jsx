@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";import fire from '../../fire.js';
+import { Link, Redirect } from "react-router-dom";
+import fire from '../../fire.js';
 
 const AdminLogin = () => {
 
@@ -9,6 +10,10 @@ const AdminLogin = () => {
     return user ? setIsLoggedIn(true) : setIsLoggedIn(false);
   });
 
+  if (isLoggedIn) {
+    <Redirect to ="/home"/>
+
+  }
   const signOut = () => {
     fire.auth().signOut()
   };
@@ -16,7 +21,7 @@ const AdminLogin = () => {
   console.log("logged in is: ", isLoggedIn);
 
   return (
-    <div className="flex justify-center hover:text-black font-bold text-xs">
+    <div className="col-start-6 flex justify-center hover:text-black font-bold text-xs">
       {!isLoggedIn
         ? (
           <Link to='/login'>
@@ -28,9 +33,6 @@ const AdminLogin = () => {
           <span onClick={signOut}>
             <button href="#">Sign out</button>
           </span>
-            <Link to='/AddNumber'>
-              Add Service
-            </Link>
           </>
         )}
     </div>
