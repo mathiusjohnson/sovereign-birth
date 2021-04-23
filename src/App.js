@@ -5,7 +5,9 @@ import AppRoute from './components/AppRoute';
 import routes from './Config/routes.js';
 import useApplicationData from "./hooks/useApplicationData";
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import ScrollToTop from "./helpers/ScrollToTop";
 
+console.log(routes);
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -31,6 +33,7 @@ function App() {
       <div className="App font-body relative">
         <Router>
           <Navigation />
+          <ScrollToTop />
             <Switch>
               <Route exact path = '/'
                 render={() => {

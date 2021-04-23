@@ -9,11 +9,9 @@ const SubscriptionService = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     setBtnValue('Sending...')
-    console.log(e.target);
     emailjs.sendForm('service_xcnmobs', 'template_w4hpumc', e.target)
     .then((result) => {
       setBtnValue('Submit')
-      console.log(result.text);
     }, (error) => {
       setBtnValue('Submit')
       console.log(error.text);

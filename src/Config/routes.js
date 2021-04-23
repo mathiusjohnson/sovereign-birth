@@ -2,7 +2,7 @@ import ServicesPage from '../pages/Services'
 import AboutPage from '../pages/About'
 import ContactPage from '../pages/Contact'
 import HomePage from '../pages/Home.js'
-import SingleServicePage from '../components/Services/SingleServicePage'
+import FreeBirthOffering from '../components/FreeBirthOffering'
 import Login from '../components/session/Login';
 
 const routes = [
@@ -17,12 +17,12 @@ const routes = [
     isPrivate: false,
   },
   {
-    path: '/service/:id',
-    component: SingleServicePage,
+    path: '/offering/:id',
+    component: FreeBirthOffering,
     isPrivate: false,
   },
   {
-    path: '/about/',
+    path: '/about',
     component: AboutPage,
     isPrivate: false,
   },

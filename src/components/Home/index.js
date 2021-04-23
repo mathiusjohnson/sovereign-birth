@@ -5,7 +5,6 @@ import Banner from "./Banner";
 import LazyLoad from 'react-lazyload';
 
 function Home(businessData) {
-  console.log('businessData in home: ', businessData.props);
   let titles = businessData.props.map(service => service.title);
   return (
     <div>

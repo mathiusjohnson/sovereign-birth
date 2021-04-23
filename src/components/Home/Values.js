@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import birthBelly from '../../assets/images/DSC_6667.jpg'
 
 const Values = () => {
@@ -19,7 +20,7 @@ const Values = () => {
           </p>
         </div>
         <div className="flex justify-center md:justify-start">
-          <a href="/contact" type="button" className="btn btn-primary">Connect With Me</a>
+          <Link to="/contact" type="button" className="btn btn-primary">Connect With Me</Link>
         </div>
       </div>
       <div className="col-start-1 md:col-start-2 md:row-start-1 mr-2">

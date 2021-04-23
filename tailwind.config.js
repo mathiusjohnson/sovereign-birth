@@ -7,7 +7,8 @@ module.exports = {
         'wheat': '#E8C1A7',
         'van': '#09E3B1',
         'maximum-blue-green': '#02C1CB',
-        'whitesmoke': '#f6f6f6'
+        'whitesmoke': '#f6f6f6',
+        'dimgray': '#5e5e5e'
       },
       backgroundImage: theme => ({
         'hero-pattern': "url('/src/assets/images/DSC_6880.jpg')",

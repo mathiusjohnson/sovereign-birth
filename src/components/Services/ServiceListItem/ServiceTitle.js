@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { saveState } from '../../../helpers/localStorage';
 
-const ShowTitle = ({id, title}) => {
+const ServiceTitle = ({id, title}) => {
   return (
-    <h1 className="text-lg">
+    <h3 className="text-lg md:text-3xl">
       <Link to={`/service/${id}`} onClick={() => saveState(id)}>
-        <p className="no-underline font-bold hover:opacity-70">{title}</p>
+        <p className="no-underline hover:opacity-70">{title}</p>
       </Link>
-    </h1>
+    </h3>
   );
 };
 
-export default ShowTitle;
+export default ServiceTitle;

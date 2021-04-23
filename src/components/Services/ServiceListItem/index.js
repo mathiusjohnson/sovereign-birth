@@ -6,7 +6,7 @@ import Status from "./Status";
 // import Confirm from "./Confirm";
 // import Error from "./Error";
 import Empty from "./Empty";
-import ShowService from './ShowService.js';
+import ServiceDetails from './ServiceDetails.js';
 
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
@@ -64,7 +64,7 @@ export default function ServiceListItem({service, createService, deleteService, 
 
 
   return (
-      <article className="text-center my-1 px-1 lg:my-4 lg:px-4 lg:mx-3 overflow-hidden rounded-lg shadow hover:shadow-lg">
+      <article className="text-center my-1 px-1 lg:my-4 overflow-hidden rounded-lg">
 
         {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
 
@@ -73,7 +73,7 @@ export default function ServiceListItem({service, createService, deleteService, 
         {mode === DELETING && <Status message="Deleting..." />}
 
         {mode === 'SHOW' && (
-          <ShowService className="" 
+          <ServiceDetails className="" 
             id={service.id} 
             service={service}/>
         )}

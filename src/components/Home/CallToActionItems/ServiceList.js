@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ServiceList = ({titles}) => {
-  console.log(titles);
   const renderedTitles = titles.map((title, index) => {
     return (
       <Link key={index} to="/offerings">
