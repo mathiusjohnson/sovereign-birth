@@ -21,7 +21,7 @@ const AdminLogin = () => {
   console.log("logged in is: ", isLoggedIn);
 
   return (
-    <div className="md:col-start-6 flex justify-center hover:text-black font-bold text-xs">
+    <div className="absolute bottom-0 right-0 flex justify-center hover:text-black font-bold text-xs">
       {!isLoggedIn
         ? (
           <Link to='/login'>

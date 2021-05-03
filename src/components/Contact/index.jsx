@@ -63,8 +63,8 @@ const Contact = () => {
   }
 
   return (
-    <div className="flex justify-center my-12 mx-8 md-mx-0">
-      <form className="w-full max-w-5xl" onSubmit={(e) => sendEmail(e)}>  
+    <div className="container mx-auto flex justify-center my-12">
+      <form className="w-full" onSubmit={(e) => sendEmail(e)}>  
         <NameInput firstName={firstName} lastName={lastName} onFirstNameChange={onFirstNameChange} onLastNameChange={onLastNameChange}/>
         <EmailInput email={email} onEmailChange={onEmailChange}/>
         <SubjectInput subject={subject} onSubjectChange={onSubjectChange} />
