@@ -6,8 +6,8 @@ import SocialMediaIcons from "./SocialMediaIcons";
 
 function Footer() {
   return (
-    <div className="container mx-auto">
-      <footer className="relative my-2 space-y-4 md:space-y-0 flex justify-between auto-rows-min text-maximum-blue-green ">
+    <div className=" bg-maximum-blue-green py-6">
+      <footer className="container mx-auto relative my-2 space-y-4 md:space-y-0 flex justify-between auto-rows-min  text-white ">
         <FooterLogo />
         <FooterDetails />
         <SocialMediaIcons />

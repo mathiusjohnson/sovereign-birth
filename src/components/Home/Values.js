@@ -7,9 +7,9 @@ const Values = () => {
   return (
     <div className="container mx-auto grid md:grid-cols-2 my-4 md:my-24 items-center">
 
-      <div className="col-start-1 mx-auto md:w-5/6 md:mt-0 flex flex-col space-y-10">
+      <div className="col-start-1 md:w-5/6 md:mt-0 flex flex-col space-y-10">
         <h1 className="text-3xl md:text-5xl font-header text-maximum-blue-green uppercase mb-4  text-center md:text-left">{hello}</h1>
-        <div className="border-b-2 border-solid border-gray-300 w-1/12"></div>
+        <div className="border-b-1 border-solid border-gray-300 w-full"></div>
         <h3 className="text-2xl font-semibold text-center md:text-left">I'm so glad you are here!</h3>
         <div className="space-y-6 text-lg md:text-2xl">
           <p> 

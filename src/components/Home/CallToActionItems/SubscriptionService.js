@@ -20,7 +20,7 @@ const SubscriptionService = () => {
   }
 
   return (
-    <div className="space-y-2 md:space-y-4 flex flex-col justify-center items-center">
+    <div className="space-y-2 md:space-y-4 my-12 flex flex-col justify-center items-center">
       <form className="flex flex-col md:flex-row justify-center contact-form space-y-2 md:space-x-4" onSubmit={sendEmail}>
         <label htmlFor="email"></label>
         <input onChange={({target}) => console.log(target.value)} type="email" name="email" className="border-2 border-black rounded text-center" size="16" placeholder="Enter email.."></input>

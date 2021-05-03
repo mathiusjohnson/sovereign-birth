@@ -3,6 +3,7 @@ import CallToAction from "./CallToAction";
 import Values from "./Values";
 import Banner from "./Banner";
 import LazyLoad from 'react-lazyload';
+import SubscriptionService from "./CallToActionItems/SubscriptionService";
 
 function Home(businessData) {
   let titles = businessData.props.map(service => service.title);
@@ -16,6 +17,10 @@ function Home(businessData) {
 
         <LazyLoad height={200}>
           <CallToAction titles={titles} />
+        </LazyLoad>
+
+        <LazyLoad height={200}>
+          <SubscriptionService />
         </LazyLoad>
       </div>
     </div>
