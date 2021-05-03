@@ -5,7 +5,7 @@ import birthBelly from '../../assets/images/DSC_6667.jpg'
 const Values = () => {
   const hello = 'Hello & Welcome'
   return (
-    <div className="grid md:grid-cols-2 my-4 md:my-24 items-center">
+    <div className="container mx-auto grid md:grid-cols-2 my-4 md:my-24 items-center">
 
       <div className="col-start-1 mx-auto md:w-5/6 md:mt-0 flex flex-col space-y-10">
         <h1 className="text-3xl md:text-5xl font-header text-maximum-blue-green uppercase mb-4  text-center md:text-left">{hello}</h1>

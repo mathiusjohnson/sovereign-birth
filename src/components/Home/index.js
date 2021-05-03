@@ -7,7 +7,7 @@ import LazyLoad from 'react-lazyload';
 function Home(businessData) {
   let titles = businessData.props.map(service => service.title);
   return (
-    <div>
+    <div className="">
       <div className="">
         <Banner />
         <LazyLoad height={200}>

@@ -6,7 +6,7 @@ import SubscriptionService from './CallToActionItems/SubscriptionService';
 const CallToAction = ({titles}) => {
 
   return (
-    <div className=" grid md:grid-cols-2">
+    <div className="container mx-auto grid md:grid-cols-2">
       <div className="col-start-1 flex flex-col justify-evenly items-center text-2xl space-y-2 md:space-y-4">
         <ServiceList titles={titles} />
         <SubscriptionService />
