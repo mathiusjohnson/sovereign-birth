@@ -1,9 +1,9 @@
 import React from "react";
-import CallToAction from "./CallToAction";
+import CallToAction from "./Offerings";
 import Values from "./Values";
 import Banner from "./Banner";
 import LazyLoad from 'react-lazyload';
-import SubscriptionService from "./CallToActionItems/SubscriptionService";
+import SubscriptionService from "./SubscriptionService";
 
 function Home(businessData) {
   let titles = businessData.props.map(service => service.title);
