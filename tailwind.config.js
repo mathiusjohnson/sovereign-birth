@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      borderWidth: {
+        '1': '1px'
+      },
       colors: {
         'wheat': '#E8C1A7',
         'van': '#09E3B1',
@@ -16,8 +19,8 @@ module.exports = {
         'call-to-action': "url('/src/assets/images/DSC_6880.jpg')"
        }),
        fontFamily: {
-        'body': ['Poppins', 'sans-serif'],
-        'header': ['Adamina', 'serif']
+        'body': ['Lusitana', 'serif'],
+        'header': ['Lato', 'sans-serif']
       },
       height: {
         'half-screen': '90vh'

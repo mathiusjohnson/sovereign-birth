@@ -39,7 +39,7 @@ const StyledMenuItem = withStyles((theme) => ({
   },
 }))(MenuItem);
 
-export default function DropDown() {
+export default function DropDown({ dropDownPosition }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -50,8 +50,9 @@ export default function DropDown() {
     setAnchorEl(null);
   };
 
+  console.log(dropDownPosition);
   return (
-    <div className="flex justify-center ml-4 md:mt-12 lg:hidden">
+    <div className={`flex justify-center items-${dropDownPosition} ml-4 md:mt-12 lg:hidden`}>
       <div>
 
       <Button

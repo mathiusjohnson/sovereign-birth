@@ -64,7 +64,7 @@ export default function ServiceListItem({service, createService, deleteService, 
 
 
   return (
-      <article className="text-center my-1 px-1 lg:my-4 overflow-hidden rounded-lg">
+      <article className="text-center my-1 px-1 lg:my-12 mx-2 overflow-hidden rounded-lg">
 
         {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
 
