@@ -19,8 +19,8 @@ module.exports = {
         'call-to-action': "url('/src/assets/images/DSC_6880.jpg')"
        }),
        fontFamily: {
-        'body': ['Poppins', 'sans-serif'],
-        'header': ['Adamina', 'serif']
+        'body': ['Lusitana', 'serif'],
+        'header': ['Lato', 'sans-serif']
       },
       height: {
         'half-screen': '90vh'

@@ -5,8 +5,8 @@ import OfferingsLink from './OfferingsLink';
 const CallToAction = () => {
 
   return (
-    <div className="container mx-4 lg:mx-auto grid lg:grid-cols-2">
-      <div className="row-start-2 lg:row-start-1 flex justify-center lg:justify-start mt-12 md:mt-4">
+    <div className="container mx-4 md:mx-auto my-12 md:my-24 grid lg:grid-cols-2">
+      <div className="row-start-2 lg:row-start-1 flex justify-center lg:justify-start mt-12 lg:mt-4">
         <div className="w-3/4 rounded">
           <img className="rounded-lg shadow-xl" src={callToActionImage} alt="pregnant belly in white dress facing sideways" />
         </div>

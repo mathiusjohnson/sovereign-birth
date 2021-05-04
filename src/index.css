@@ -1,5 +1,16 @@
 @tailwind base;
 @layer base {
+	body {
+		@apply font-body;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-header;
+	}
 	.overlay::before {
 		content: '';
 		position: absolute;
@@ -27,7 +38,7 @@
 
 @layer utilities {
 	.btn {
-			@apply px-4 py-2 font-semibold tracking-widest rounded-lg border-2 cursor-pointer text-center no-underline object-contain;
+			@apply px-4 py-2 font-semibold tracking-widest rounded border-2 cursor-pointer text-center no-underline object-contain;
 	}
 
 	.btn-primary,
