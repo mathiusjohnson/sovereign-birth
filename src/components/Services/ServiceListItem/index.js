@@ -62,6 +62,7 @@ export default function ServiceListItem({service, createService, deleteService, 
   //     .catch((error) => transition(ERROR_DELETE, true));
   // }
 
+  console.log(isLoggedIn, mode)
 
   return (
       <article className="text-center my-1 px-1 lg:my-12 mx-2 overflow-hidden rounded-lg">
@@ -75,7 +76,10 @@ export default function ServiceListItem({service, createService, deleteService, 
         {mode === 'SHOW' && (
           <ServiceDetails className="" 
             id={service.id} 
-            service={service}/>
+            service={service}
+            isLoggedIn={isLoggedIn}
+            onEditClicked={onEditClicked}
+            />
         )}
 
         {mode === 'EDIT' && (
@@ -87,16 +91,6 @@ export default function ServiceListItem({service, createService, deleteService, 
             serviceText_body={service.text_body}
           />
         )}
-
-        <footer className="">
-          { isLoggedIn && mode === 'SHOW' ? 
-          <div className="flex">
-            <div onClick={() => onEditClicked()} className="btn btn-primary m-4">Edit</div>
-          </div>
-            :
-            ""
-          }
-        </footer>
       </article>
   );
 };

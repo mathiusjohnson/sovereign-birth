@@ -19,6 +19,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@tinymce/tinymce-react": "^3.12.6",
     "autoprefixer": "^9.8.6",
     "axios": "^0.21.1",
     "emailjs": "^3.4.0",
@@ -35,6 +36,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
+    "tinymce": "^5.8.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

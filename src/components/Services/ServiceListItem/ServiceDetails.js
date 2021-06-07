@@ -4,7 +4,7 @@ import ServiceButton from './ServiceButton';
 import ServiceTextBody from './ServiceTextBody';
 import ServiceTitle from './ServiceTitle';
 
-const ServiceDetails = ({service}) => {
+const ServiceDetails = ({service, isLoggedIn, onEditClicked}) => {
   const onClickSaveState = () => {
     saveState(service)
   }
@@ -15,6 +15,9 @@ const ServiceDetails = ({service}) => {
         <ServiceTextBody text_body={service.text_body} />
       </div>
       <div className="flex justify-center">
+          {isLoggedIn && (
+              <div onClick={() => onEditClicked()} className="btn btn-primary m-4 bg-black text-lg text-black">Edit</div>
+          )}
         <ServiceButton
           onClickSaveState={onClickSaveState}
           call_to_action={service.call_to_action} 

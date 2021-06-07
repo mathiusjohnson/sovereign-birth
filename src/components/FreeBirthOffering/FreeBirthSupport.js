@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { Editor } from '@tinymce/tinymce-react';
 import FreeBirthList from './FreeBirthList';
 import ScheduleButton from './ScheduleButton';
 
 const FreeBirthSupport = () => {
+    const editorRef = useRef(null);
+    const log = () => {
+      if (editorRef.current) {
+        console.log(editorRef.current.getContent());
+      }
+    };
+
   return (
     <div className="flex flex-col items-center">
       <div className="w-3/4">
-
-        <h3 className='text-3xl my-8'>Freebirth Support</h3>
+       <button onClick={log}>Log editor content</button>        <h3 className='text-3xl my-8'>Freebirth Support</h3>
         <div className="text-xl text-dimgray space-y-8 mb-8">
           <p>What is freebirth? Freebirth is birthing without the presence of a licensed medical provider.  This type of birth offers the birther full autonomy to have an undisturbed-physiological birth and hold the early postpartum in a container of pure sacredness.</p>
           <p>My freebirth support is designed for YOU.  We will visit in person or virtually once a month throughout your pregnancy with the option to connect with me via e-mail & phone at any time.  I am here for YOU as a mentor & friend who believes in your freebirth vision.</p>
