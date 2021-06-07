@@ -1,17 +1,16 @@
 import React, { useRef } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 
-const tinyMCEEditor = () => {
+const TinyMCEEditor = () => {
     const editorRef = useRef(null);
     const log = () => {
       if (editorRef.current) {
         console.log(editorRef.current.getContent());
       }
     };
-
     return (
       <Editor
-        apiKey={process.env.TINYMCE_API}
+        apiKey={process.env.REACT_APP_TINYMCE_API}
          onInit={(evt, editor) => editorRef.current = editor}
          initialValue="<p>Insert Text Here</p>"
          init={{
@@ -32,4 +31,4 @@ const tinyMCEEditor = () => {
     );
 };
 
-export default tinyMCEEditor;
+export default TinyMCEEditor;

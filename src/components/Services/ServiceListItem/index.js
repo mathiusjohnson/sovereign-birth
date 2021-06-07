@@ -79,6 +79,8 @@ export default function ServiceListItem({service, createService, deleteService, 
             service={service}
             isLoggedIn={isLoggedIn}
             onEditClicked={onEditClicked}
+            mode={mode}
+            back={back}
             />
         )}
 
